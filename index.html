@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Survey</title>
+
+    <style>
+        body{
+            background-image: linear-gradient(141deg, #9fb8ad 0%, #1fc8db 51%, #2cb5e8 75%);
+        }
+        #title{
+            text-align: center;
+        }
+
+        #description{
+            text-align: center;
+        }
+        
+        
+        .container {
+             width: 100%;
+             margin: 3.125rem auto 0 auto;
+        }
+
+        @media (min-width: 576px) {
+         .container {
+            max-width: 540px;
+        }
+        }       
+
+        @media (min-width: 768px) {
+        .container {
+            max-width: 720px;
+        }
+        }
+
+        .form-group {
+            margin: 0 auto 1.25rem auto;
+            padding: 0.25rem;
+        }
+       
+       
+    </style>
+</head>
+
+<body>
+    
+        <h1 id="title">Webiste Survey</h1>
+        <strong><p id="description">Please fill in the website information</p></strong>
+        <div class="container">
+            <form id="survey-form">
+                <div class="form-group">
+                    <label id="name-label" for="name">Name</label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="email-label" for="email">Email</label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="number-label" for="number">Age</label>
+                    <input type="number" name="number" id="number" placeholder="Enter your Age" min="18" max="100" required>
+                </div>
+
+                <div class="form-group">
+                    <label id="number-label" for="number">What browser do you use?</label>
+                    <select id="dropdown">
+                        <option value="chrome">Google Chrome</option>
+                        <option value="firefox">Firefox</option>
+                        <option value="ie">IE</option>
+                        <option value="safari">Safari</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <p id="access-label" for="access">Which device did you use to access the website?</p>
+                    <label><input type="radio" name="access" value="desktop" checked />Desktop</label>
+                    <label><input type="radio" name="access" value="laptop"/>Laptop</label>
+                    <label><input type="radio" name="access" value="padDevice"/>Pad devices</label>
+                    <label><input type="radio" name="access" value="mobile"/>Mobile devices</label>
+                    <label><input type="radio" name="access" value="others"/>Others</label>
+                </div>
+
+                <div class="form-group">
+                    <p id="hear-label" for="hear">How did you hear about this website?</p>
+                    <label><input type="checkbox" name="hear" value="social" />Social Media</label>
+                    <label><input type="checkbox" name="hear" value="advertising"/>Advertising</label>
+                    <label><input type="checkbox" name="hear" value="engine"/>Search Engine</label>
+                    <label><input type="checkbox" name="hear" value="friend"/>Friend</label>
+                </div>
+
+                <div class="form-group">
+                    <p>Any comments or suggestions?</p>
+                    <textarea id="comments" name="comment" placeholder="Enter your comment here...">
+
+                    </textarea>
+                  </div>
+                
+                  <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
